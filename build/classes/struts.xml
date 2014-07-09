@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<!-- extends 继承json-default -->
+	<package name="default" namespace="/status" extends="json-default">
+		<action name="login" class="cn.redarmy.action.ActionClass"
+			method="LogIn">
+			<!-- 设置返回类型为json -->
+			<result name="success" type="json">
+				<param name="includeProperties">
+					loginret
+				</param>
+			</result>
+		</action>
+		<action name="insertstatus" class="cn.redarmy.action.ActionClass"
+			method="InsertStatus">
+			<!-- 设置返回类型为json -->
+			<result name="success" type="json">
+				<param name="includeProperties">
+					insertstatusret
+				</param>
+			</result>
+		</action>
+		<action name="insertsearchrecord" class="cn.redarmy.action.ActionClass"
+			method="InsertSearchRecord">
+			<!-- 设置返回类型为json -->
+			<result name="success" type="json">
+				<param name="includeProperties">
+					insertsearchrecordret
+				</param>
+			</result>
+		</action>
+		<action name="getsamestatuspersonnum" class="cn.redarmy.action.ActionClass"
+			method="GetSameStatusPersonNum">
+			<!-- 设置返回类型为json -->
+			<result name="success" type="json">
+				<param name="includeProperties">
+					samestatuspersonnum
+				</param>
+			</result>
+		</action>
+		<action name="getissearchingpersonnum" class="cn.redarmy.action.ActionClass"
+			method="GetIsSearchingPersonNum">
+			<!-- 设置返回类型为json -->
+			<result name="success" type="json">
+				<param name="includeProperties">
+					issearchingpersonnum
+				</param>
+			</result>
+		</action>
+		<action name="getservicetime" class="cn.redarmy.action.ActionClass"
+			method="GetServiceTime">
+			<!-- 设置返回类型为json -->
+			<result name="success" type="json">
+				<param name="includeProperties">
+					servicetime
+				</param>
+			</result>
+		</action>
+		<action name="getaccountname" class="cn.redarmy.action.ActionClass"
+			method="GetAccountName">
+			<!-- 设置返回类型为json -->
+			<result name="success" type="json">
+				<param name="includeProperties">
+					straccountname
+				</param>
+			</result>
+		</action>
+		<action name="getusingpersonnum" class="cn.redarmy.action.ActionClass"
+			method="GetUsingPersonNum">
+			<!-- 设置返回类型为json -->
+			<result name="success" type="json">
+				<param name="includeProperties">
+					usingnum
+				</param>
+			</result>
+		</action>
+	</package>
+
+</struts>   
